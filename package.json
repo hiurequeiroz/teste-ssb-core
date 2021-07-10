@@ -8,7 +8,7 @@
     "dev": "vue-cli-service serve",
     "build-vue": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build": "NODE_ENV=production browserify -g envify -p esmify --full-paths src/ssb-setup.js > public/ssb-bundle.js && node src/write-dist.js"
+    "build": "browserify src/ssb-setup.js -o public/ssb-bundle.js" 
   },
   "dependencies": {
     "core-js": "^3.6.5",
