@@ -1,28 +1,36 @@
-import { createApp } from "vue";
-import App from "./App.vue";
+  import { createApp } from "vue";
+  import App from "./App.vue";
+  // require('ssb-browser-core/ssb-singleton')
+  
+  /* let SSB
+  let err  */
 
-let SSB
-let err
-if (window.getSSBSingleton) {
   const ssbSingleton = window.getSSBSingleton();
-  [err, SSB] = ssbSingleton.getSSB();
-} else {
-  console.log('Bundle not loaded!')
-}
-console.log('SSB', SSB, err)
 
-if (SSB) {
-  console.log('Postando')
-  SSB.db.publish(
-    {
-      type: "post",
-      text: "oioi",
-    },
-    (err) => {
-      console.log("🚀 ~ file: main.js ~ line 12 ~ err", err);
-      console.log("Postado");
-    }
-  );
-}
+  console.log(ssbSingleton)
 
-createApp(App).mount("#app");
+  /* if (window.getSSBSingleton) {
+    const ssbSingleton = window.getSSBSingleton();
+    [err, SSB] = ssbSingleton.getSSB();
+  } else {
+    console.log('Bundle not loaded!', typeof(window.getSSBSingleton), window.ssbSingleton, window)
+  }
+
+  console.log('SSB', SSB, err)
+
+
+  if (SSB) {
+    console.log('Postando')
+    SSB.db.publish(
+      {
+        type: "post",
+        text: "oioi",
+      },
+      (err) => {
+        console.log("🚀 ~ file: main.js ~ line 12 ~ err", err);
+        console.log("Postado");
+      }
+    );
+  } */
+
+  createApp(App).mount("#app");
