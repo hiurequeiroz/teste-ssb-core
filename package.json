@@ -8,12 +8,12 @@
     "dev": "vue-cli-service serve",
     "build-vue": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build": "browserify src/ssb-setup.js -o public/ssb-bundle.js" 
+    "build": "browserify src/ssb-setup.js -o public/ssb-bundle.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "pull-stream": "^3.6.14",
-    "ssb-browser-core": "^11.0.1",
+    "ssb-browser-core": "^11.1.0",
     "ssb-caps": "^1.1.0",
     "ssb-threads": "^8.0.0",
     "vue": "^3.0.0"
